@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Add Employees</h1>
+    <input type="text" class="form-control" [(ngModel)]="userData.Name" placeholder="Name" id="uname" name="uname"
+        required #uname="ngModel"><span *ngIf="uname.invalid" class="text-danger">*</span>
+    
+    <input type="number" class="form-control mb-2" [(ngModel)]="userData.Age" placeholder="Age" [min]="18" [max]="80">
+    <input type="number" class="form-control" [(ngModel)]="userData.Mark" placeholder="Mark">
+    <div class="mt-2">
+        <button class="btn btn-success btn-sm" (click)="addEmpData()">Submit</button>
+        <button class="btn" routerLink="/AllEmployees/">Home</button>
+    </div>
+</div>

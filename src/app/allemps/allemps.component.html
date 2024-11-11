@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="text-center">All Employees</h1>
+    <button routerLink="/addemp/" class="btn btn-success btn-sm">Add Employee +</button>
+    <table class="table my-5">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Mark</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of getData">
+                <td>{{p.Name}}</td>
+                <td>{{p.Age}}</td>
+                <td>{{p.Mark}}</td>
+                <td>
+                    <button class="btn btn-success btn-sm" routerLink="/empdetails/{{p.Id}}">Details</button>&nbsp;
+                    <button class="btn btn-info btn-sm" routerLink="/edit/{{p.Id}}">Edit</button>&nbsp;
+                    <button class="btn btn-danger btn-sm" (click)="deleteEmp(p.Id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>Edit Employee</h2>
+    <input type="text" class="form-control mb-2" [(ngModel)]="empData.Name" placeholder="Name">
+    <input type="text" class="form-control mb-2" [(ngModel)]="empData.Age" placeholder="Name">
+    <input type="text" class="form-control mb-2" [(ngModel)]="empData.Mark" placeholder="Name">
+    <div class="d-flex">
+        <button class="btn btn-info btn-sm" (click)="updateEmployee()">Edit</button>&nbsp;
+        <button class="btn btn-secondary btn-sm" routerLink="/AllEmployees/">Home</button>
+    </div>
+</div>
